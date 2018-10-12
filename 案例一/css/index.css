@@ -1,0 +1,74 @@
+*{
+	/*清除所有默认的内外边距，设置字体格式*/
+	margin: 0;
+	padding: 0;
+	font-size: 15px;
+	font-family: "微软雅黑";
+}
+
+ul{
+	/* 所有的list选项都没有前面的点 */ 
+	list-style-type: none;
+}
+
+a{
+	/* 所有的连接都没有下划线 */ 
+	text-decoration: none;
+	color: orange;
+}
+
+/*这是选项卡最外层包裹的div*/
+.main{
+	width: 420px;
+	height: 300px;
+	margin: 0 auto;/* 居中显示 */
+	margin-top: 50px;
+}
+
+#titleCard{
+	border-bottom: 2px solid green;/* 设置底部栏边框 */
+	width: 420px;
+	height: 32px;
+}
+
+#titleCard li{
+	display: inline-block;/*竖屏排列*/
+	border: 1px solid black;
+	border-bottom: none;/*下边框置为none*/
+	width: 120px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+}
+
+/*当li被选中时，把className设置成这个类名。注意这个类名的定义方式，必须把#titleCard li.加上才能够生效，我估计是因为要比总体的格式定义更细，才能够对局部生效。*/
+#titleCard li.liActive{
+	border-top: 2px solid green;/*上边框置为绿色*/
+	border-bottom: 2px solid white;/*下边框设置为白色，覆盖原先的绿色*/
+}
+
+#titleCard li:hover{
+	cursor: pointer;/*鼠标放在上面显示 手 */
+}
+
+#content div{
+	width: 420px;
+	height: 250px;
+	border: 1px solid red;
+	border-top: none;/*顶部无边框*/
+}
+
+#content div ul li{
+	line-height: 2em;
+	text-indent: 8px;/*文本缩进*/
+}
+
+.show{
+	display: block;
+}
+
+.hide{
+	/*隐藏，并不占地方*/ 
+	display:none;  
+	/*visibility:hidden 这种隐藏占地方*/
+}
